@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background: linear-gradient(90deg, rgba(62,180,58,1) 0%, rgba(69,146,252,1) 100%);
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer {
+  height: 100%;
+  /* color: #eee; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-family: 'Press Start 2P', sans-serif;
+  letter-spacing: 10px;
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 41.5vw;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  outline: none;
+}
+
+.btn,
+.levelBtn {
+  border: none;
+  background-color: #ccc;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.levelBtn:hover {
+  background-color: #eee;
+  transform: scale(1.1);
+}
+
+.levelBtn {
+  background-color: #eee;
+  transform: scale(1.1);
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  right: 2rem;
+}
+
+.easy {
+  top: 2rem;
+}
+
+.message {
+  margin-bottom: 5rem;
+  height: 3rem;
+}
+
+.label-attempt {
+  margin-bottom: 1rem;
+}
+.label-score {
+  margin-bottom: 1rem;
+}
+
+/*MODAL WINDOW*/
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.hidden {
+  display: none;
+}
+
+.modal {
+  font-size: 1.5rem;
+  font-family: 'Atomic Age', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: rgb(88, 230, 84);
+  padding: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.modelMessage{
+  font-size: 3rem;
+  margin-top: 2px;
+  color: darkmagenta;
+}
