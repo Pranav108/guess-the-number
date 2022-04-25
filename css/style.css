@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
-
 html {
-  font-size: 62.5%;
+  font-size: 63%;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family:  'Nova Square','Press Start 2P', sans-serif;
   color: #eee;
   background: linear-gradient(90deg, rgba(62,180,58,1) 0%, rgba(69,146,252,1) 100%);
 }
@@ -47,15 +50,27 @@ footer {
 }
 
 .right {
-  width: 52rem;
-  font-size: 2rem;
+  background-image: url('/img/wood_score.png');
+  width: 55rem;
+  background-position: center; 
+  background-size: cover; 
+}
+.right div{
+  font-family: Federant,cursive;
+  font-weight: bold;
+  margin: 20px 85px;
+  color: #703c08;
+  letter-spacing: 4px;
+  font-size: 3rem;
 }
 
 /* ELEMENTS STYLE */
 h1 {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Cabin Sketch', 'Press Start 2P', sans-serif;
   letter-spacing: 10px;
-  font-size: 5rem;
+  font-size: 7rem;
+  font-weight: bold;
+  color: blue;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -65,16 +80,19 @@ h1 {
 }
 
 .number {
-  background: #eee;
-  color: #333;
+  background: #eeeeee;
+  font-family: Rye,sans-serif;
+  color: rgb(211, 24, 24);
   font-size: 6rem;
   width: 15rem;
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(10, 16, 26, 0.288);	
 }
 
 .between {
@@ -92,9 +110,14 @@ h1 {
 
 .guess {
   background: none;
-  border: 4px solid #eee;
+	color: #3498db;
+  border: 7px solid #eee;
+
+  background-color: #d7dadd;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+				inset  2px 2px 5px rgba(94,104,121,0.288);	
   font-family: inherit;
-  color: inherit;
+  /* color: inherit; */
   font-size: 5rem;
   padding: 2.5rem;
   width: 25rem;
@@ -104,40 +127,45 @@ h1 {
   outline: none;
 }
 
-.btn,
-.levelBtn {
+.btn {
   border: none;
-  background-color: #ccc;
+  background: #d5d5da;
   color: #222;
+  border-radius: 5px;
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(10, 16, 26, 0.288);	
 }
 
-.btn:hover,
-.levelBtn:hover {
-  background-color: #eee;
+.btn:hover {
+  background-color: #dde1e7;
   transform: scale(1.1);
 }
 
 .levelBtn {
-  background-color: #eee;
-  transform: scale(1.1);
-  font-size: 1.5rem;
-  padding: 1.5rem 2rem;
+  font-family: inherit;
+  top: 2rem;
+  border: none;
+  background-color: transparent;
+  color: #222;  
+  background-image: url('/img/wood_level.png');
+  width: max-content;
+  background-position: center; 
+  background-size: cover; 
+  font-size: 2.8rem;
+  padding:  2rem;
   position: absolute;
   right: 2rem;
 }
 
-.easy {
-  top: 2rem;
-}
-
 .message {
+  font-family: Rye,sans-serif;
+  font-size: 90%;
   margin-bottom: 5rem;
-  height: 3rem;
+  height: 2.8rem;
 }
 
 .label-attempt {
