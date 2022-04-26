@@ -2,12 +2,15 @@
 
 //Variable declaration
 let score = 25;
-let multiplier = 1;
-let secretNumber = selectNumber(multiplier);
 let highScore = 0;
 let avgSum = 1;
 let attemptCount = 1;
 let currentLevel = "easy";
+let secretNumber = selectNumber();
+let primeNumbers = [
+  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+  73, 79, 83, 89, 97,
+];
 
 //Selectors
 const body = document.querySelector("body");
@@ -40,12 +43,21 @@ function closeModal() {
 }
 
 function rangeOfNumbers() {
-  betweenText.innerText = `(Between 1 and ${multiplier * 25})`;
+  if (currentLevel === "hard")
+    betweenText.innerText = `Prime number between 1 - 100`;
+  else if (currentLevel === "medium")
+    betweenText.innerText = `Even number between 1 - 50`;
+  else betweenText.innerText = `Natural number between 1 - 25`;
 }
 //Generate the secret number🤫
-function selectNumber(multiplier) {
-  return 10;
-  return Math.trunc(Math.random() * multiplier * 25) + 1;
+function selectNumber() {
+  if (currentLevel === "hard")
+    return primeNumbers[Math.trunc(Math.random() * 25)];
+  else if (currentLevel === "medium") {
+    const num = Math.trunc(Math.random() * 50) + 1;
+    return num + (num % 2);
+  }
+  return Math.trunc(Math.random() * 25) + 1;
 }
 
 function calcAttempt() {
@@ -53,16 +65,14 @@ function calcAttempt() {
   attemptCount++;
   if (attemptCount > 5) {
     if (currentLevel === "hard") {
-      openModal("you have already masterd this Game, Let's play again!!");
+      openModal("you have already masterd this Game, Let's play again😀!!");
       currentLevel = "easy";
-    } else if (currentLevel === "easy" && avgSum / 5 > 15) {
+    } else if (currentLevel === "easy" && avgSum / 5 > 10) {
       currentLevel = "medium";
-      multiplier = 2;
-      openModal("Your level upgraded to MEDIUM!");
-    } else if (currentLevel === "medium" && avgSum / 5 > 20) {
+      openModal("Your level upgraded to MEDIUM🥳!");
+    } else if (currentLevel === "medium" && avgSum / 5 > 15) {
       currentLevel = "hard";
-      multiplier = 4;
-      openModal("Your level upgraded to HARD!!");
+      openModal("Your level upgraded to HARD🥳🥳!!");
     } else openModal("Let's give one more try!!");
     restartGame();
   } else {
@@ -108,7 +118,8 @@ function restartGame(isPartial = false) {
   attemptCount = isPartial === true ? attemptCount : 1;
   avgSum = isPartial === true ? avgSum : 0;
   highScore = isPartial === true ? highScore : 0;
-  secretNumber = selectNumber(multiplier);
+  secretNumber = selectNumber();
+  console.log(`${secretNumber} - 🤫😜`);
   rangeOfNumbers();
 
   displayMessage("Start guessing...");

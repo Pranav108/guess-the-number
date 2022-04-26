@@ -5,7 +5,10 @@
 ## Project Description 📑
 
 - This is a simple number guessing game that I created as my e-Litmus Internship task.
-- We need to guess a number in a range _**1-N(N depends on level)**_.
+- We need to guess a number in a given range.
+- In EASY level the secret number will be a **NATURAL** number between 1 - 25.
+- In MEDIUM level the secret number will be an **EVEN** number between 1 - 50.
+- In HARD level the secret number will be a **PRIME** number between 1 - 100.
 - We have the _**25**_ chances to guess the correct number.
 - We'll win on guessing the correct number within given chances else we lose.
 - If we score higher than before then it'll become high score(HighScore will reset tio zero on each level).
@@ -62,9 +65,9 @@ Start the server
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b issue101`)
-3. Commit your Changes (`git commit -m 'fixed some issues`)
-4. Push to the Branch (`git push origin issue101`)
+2. Create your Feature Branch (`git checkout -b issue101/features`)
+3. Commit your Changes (`git commit -m 'fixed some issues/added some features`)
+4. Push to the Branch (`git push origin issue101/featues101`)
 5. Open a Pull Request
 
 ## Reference 🙏
