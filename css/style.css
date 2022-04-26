@@ -50,7 +50,7 @@ footer {
 }
 
 .right {
-  background-image: url('/img/wood_score.png');
+  background-image: url('img/wood_score.png');
   width: 55rem;
   background-position: center; 
   background-size: cover; 
