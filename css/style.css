@@ -50,7 +50,7 @@ footer {
 }
 
 .right {
-  background-image: url('img/wood_score.png');
+  background-image: url('/guess-the-number/img/wood_score.png');
   width: 55rem;
   background-position: center; 
   background-size: cover; 
@@ -151,7 +151,7 @@ h1 {
   border: none;
   background-color: transparent;
   color: #222;  
-  background-image: url('/img/wood_level.png');
+  background-image: url('/guess-the-number/img/wood_level.png');
   width: max-content;
   background-position: center; 
   background-size: cover; 
